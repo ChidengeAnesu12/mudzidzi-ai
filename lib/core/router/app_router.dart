@@ -1,7 +1,10 @@
-
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 
+import '../../features/splash/presentation/splash_screen.dart';
+import '../../features/auth/presentation/screens/login_screen.dart';
+import '../../features/auth/presentation/screens/register_screen.dart';
+import '../../features/auth/presentation/screens/forgot_password_screen.dart';
 import '../widgets/placeholder_screen.dart';
 import '../widgets/main_shell.dart';
 import 'route_names.dart';
@@ -14,26 +17,22 @@ final goRouterProvider = Provider<GoRouter>((ref) {
       GoRoute(
         path: RouteNames.splashPath,
         name: RouteNames.splash,
-        builder: (context, state) =>
-            const PlaceholderScreen(label: 'Splash Screen'),
+        builder: (context, state) => const SplashScreen(),
       ),
       GoRoute(
         path: RouteNames.loginPath,
         name: RouteNames.login,
-        builder: (context, state) =>
-            const PlaceholderScreen(label: 'Login Screen'),
+        builder: (context, state) => const LoginScreen(),
       ),
       GoRoute(
         path: RouteNames.registerPath,
         name: RouteNames.register,
-        builder: (context, state) =>
-            const PlaceholderScreen(label: 'Register Screen'),
+        builder: (context, state) => const RegisterScreen(),
       ),
       GoRoute(
         path: RouteNames.forgotPasswordPath,
         name: RouteNames.forgotPassword,
-        builder: (context, state) =>
-            const PlaceholderScreen(label: 'Forgot Password Screen'),
+        builder: (context, state) => const ForgotPasswordScreen(),
       ),
 
       // Bottom-nav shell: Dashboard / Learn / Progress / Profile
@@ -47,8 +46,7 @@ final goRouterProvider = Provider<GoRouter>((ref) {
               GoRoute(
                 path: RouteNames.dashboardPath,
                 name: RouteNames.dashboard,
-                builder: (context, state) =>
-                    const PlaceholderScreen(label: 'Dashboard'),
+                builder: (context, state) => const PlaceholderScreen(label: 'Dashboard'),
               ),
             ],
           ),
@@ -57,8 +55,7 @@ final goRouterProvider = Provider<GoRouter>((ref) {
               GoRoute(
                 path: RouteNames.learnPath,
                 name: RouteNames.learn,
-                builder: (context, state) =>
-                    const PlaceholderScreen(label: 'Learn'),
+                builder: (context, state) => const PlaceholderScreen(label: 'Learn'),
               ),
             ],
           ),
@@ -67,8 +64,7 @@ final goRouterProvider = Provider<GoRouter>((ref) {
               GoRoute(
                 path: RouteNames.progressPath,
                 name: RouteNames.progress,
-                builder: (context, state) =>
-                    const PlaceholderScreen(label: 'Progress'),
+                builder: (context, state) => const PlaceholderScreen(label: 'Progress'),
               ),
             ],
           ),
@@ -77,8 +73,7 @@ final goRouterProvider = Provider<GoRouter>((ref) {
               GoRoute(
                 path: RouteNames.profilePath,
                 name: RouteNames.profile,
-                builder: (context, state) =>
-                    const PlaceholderScreen(label: 'Profile'),
+                builder: (context, state) => const PlaceholderScreen(label: 'Profile'),
               ),
             ],
           ),
@@ -89,32 +84,27 @@ final goRouterProvider = Provider<GoRouter>((ref) {
       GoRoute(
         path: RouteNames.learningSessionPath,
         name: RouteNames.learningSession,
-        builder: (context, state) =>
-            const PlaceholderScreen(label: 'Learning Session'),
+        builder: (context, state) => const PlaceholderScreen(label: 'Learning Session'),
       ),
       GoRoute(
         path: RouteNames.aiTutorPath,
         name: RouteNames.aiTutor,
-        builder: (context, state) =>
-            const PlaceholderScreen(label: 'AI Tutor'),
+        builder: (context, state) => const PlaceholderScreen(label: 'AI Tutor'),
       ),
       GoRoute(
         path: RouteNames.knowledgeMapPath,
         name: RouteNames.knowledgeMap,
-        builder: (context, state) =>
-            const PlaceholderScreen(label: 'Knowledge Map'),
+        builder: (context, state) => const PlaceholderScreen(label: 'Knowledge Map'),
       ),
       GoRoute(
         path: RouteNames.achievementsPath,
         name: RouteNames.achievements,
-        builder: (context, state) =>
-            const PlaceholderScreen(label: 'Achievements'),
+        builder: (context, state) => const PlaceholderScreen(label: 'Achievements'),
       ),
       GoRoute(
         path: RouteNames.teacherDashboardPath,
         name: RouteNames.teacherDashboard,
-        builder: (context, state) =>
-            const PlaceholderScreen(label: 'Teacher Dashboard'),
+        builder: (context, state) => const PlaceholderScreen(label: 'Teacher Dashboard'),
       ),
     ],
   );
