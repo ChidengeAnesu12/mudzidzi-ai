@@ -29,6 +29,30 @@ class MockDashboardRepository {
         NextUpItem(title: 'Practice: Linear Equations', subtitle: '10 questions'),
         NextUpItem(title: 'Challenge: Word Problems', subtitle: 'Test your skills'),
       ],
+      weeklyGoalTarget: 50,
+      weeklyGoalCompleted: 32,
+      recentActivity: [
+        RecentActivityItem(
+          title: 'Completed: Linear Equations practice',
+          timeAgo: '2h ago',
+          type: ActivityType.practice,
+        ),
+        RecentActivityItem(
+          title: 'Earned badge: Quick Learner',
+          timeAgo: 'Yesterday',
+          type: ActivityType.badgeEarned,
+        ),
+        RecentActivityItem(
+          title: '7-day streak achieved!',
+          timeAgo: 'Yesterday',
+          type: ActivityType.streak,
+        ),
+        RecentActivityItem(
+          title: 'Completed: Indices & Surds revision',
+          timeAgo: '2 days ago',
+          type: ActivityType.lessonCompleted,
+        ),
+      ],
     );
   }
 }

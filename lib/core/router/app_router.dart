@@ -1,5 +1,6 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
+import '../../features/dashboard/presentation/screens/dashboard_screen.dart';
 
 import '../../features/splash/presentation/splash_screen.dart';
 import '../../features/auth/presentation/screens/login_screen.dart';
@@ -41,12 +42,12 @@ final goRouterProvider = Provider<GoRouter>((ref) {
           return MainShell(navigationShell: navigationShell);
         },
         branches: [
-          StatefulShellBranch(
+         StatefulShellBranch(
             routes: [
               GoRoute(
                 path: RouteNames.dashboardPath,
                 name: RouteNames.dashboard,
-                builder: (context, state) => const PlaceholderScreen(label: 'Dashboard'),
+                builder: (context, state) => const DashboardScreen(),
               ),
             ],
           ),
