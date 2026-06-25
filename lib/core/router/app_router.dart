@@ -10,6 +10,7 @@ import '../../features/auth/presentation/screens/forgot_password_screen.dart';
 import '../widgets/placeholder_screen.dart';
 import '../widgets/main_shell.dart';
 import 'route_names.dart';
+import '../../features/ai_tutor/presentation/screens/ai_tutor_screen.dart';
 
 final goRouterProvider = Provider<GoRouter>((ref) {
   return GoRouter(
@@ -94,7 +95,7 @@ final goRouterProvider = Provider<GoRouter>((ref) {
       GoRoute(
         path: RouteNames.aiTutorPath,
         name: RouteNames.aiTutor,
-        builder: (context, state) => const PlaceholderScreen(label: 'AI Tutor'),
+        builder: (context, state) => const AiTutorScreen(),
       ),
       GoRoute(
         path: RouteNames.knowledgeMapPath,
