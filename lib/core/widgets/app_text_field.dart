@@ -11,6 +11,7 @@ class AppTextField extends StatelessWidget {
     required this.label,
     this.hint,
     this.obscureText = false,
+    this.enabled = true,
     this.keyboardType,
     this.prefixIcon,
     this.suffixIcon,
@@ -22,6 +23,7 @@ class AppTextField extends StatelessWidget {
   final String label;
   final String? hint;
   final bool obscureText;
+  final bool enabled;
   final TextInputType? keyboardType;
   final IconData? prefixIcon;
   final Widget? suffixIcon;
@@ -33,6 +35,7 @@ class AppTextField extends StatelessWidget {
     return TextFormField(
       controller: controller,
       obscureText: obscureText,
+      enabled: enabled,
       keyboardType: keyboardType,
       validator: validator,
       textInputAction: textInputAction,

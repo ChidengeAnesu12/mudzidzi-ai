@@ -1,7 +1,8 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import '../../features/dashboard/presentation/screens/dashboard_screen.dart';
-
+import '../../features/learning_session/presentation/screens/learning_session_screen.dart';
+import '../../shared/models/topic_model.dart';
 import '../../features/splash/presentation/splash_screen.dart';
 import '../../features/auth/presentation/screens/login_screen.dart';
 import '../../features/auth/presentation/screens/register_screen.dart';
@@ -85,7 +86,10 @@ final goRouterProvider = Provider<GoRouter>((ref) {
       GoRoute(
         path: RouteNames.learningSessionPath,
         name: RouteNames.learningSession,
-        builder: (context, state) => const PlaceholderScreen(label: 'Learning Session'),
+        builder: (context, state) {
+          final topicId = state.extra is TopicId ? state.extra as TopicId : TopicId.algebra;
+          return LearningSessionScreen(topicId: topicId);
+        },
       ),
       GoRoute(
         path: RouteNames.aiTutorPath,

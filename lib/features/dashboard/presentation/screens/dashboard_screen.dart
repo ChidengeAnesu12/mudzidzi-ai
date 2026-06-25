@@ -61,7 +61,10 @@ class DashboardScreen extends ConsumerWidget {
                   const SizedBox(height: 16),
                   ContinueLearningCard(
                     info: summary.continueLearning,
-                    onContinue: () => context.pushNamed(RouteNames.learningSession),
+                    onContinue: () => context.pushNamed(
+                      RouteNames.learningSession,
+                      extra: TopicId.algebra,
+                    ),
                   ),
                   const SizedBox(height: 16),
                   WeeklyGoalCard(
