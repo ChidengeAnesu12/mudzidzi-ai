@@ -37,6 +37,11 @@ class DashboardScreen extends ConsumerWidget {
         title: const Text('Dashboard'),
         actions: [
           IconButton(
+            icon: const Icon(Icons.hub_outlined),
+            tooltip: 'Knowledge Map',
+            onPressed: () => context.pushNamed(RouteNames.knowledgeMap),
+          ),
+          IconButton(
             icon: const Icon(Icons.smart_toy_outlined),
             tooltip: 'AI Tutor',
             onPressed: () => context.pushNamed(RouteNames.aiTutor),
