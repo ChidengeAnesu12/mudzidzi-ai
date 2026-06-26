@@ -11,6 +11,7 @@ import '../widgets/placeholder_screen.dart';
 import '../widgets/main_shell.dart';
 import '../../features/knowledge_map/presentation/screens/knowledge_map_screen.dart';
 import 'route_names.dart';
+import '../../features/achievements/presentation/screens/achievements_screen.dart';
 import '../../features/progress/presentation/screens/progress_screen.dart';
 import '../../features/ai_tutor/presentation/screens/ai_tutor_screen.dart';
 
@@ -104,10 +105,10 @@ final goRouterProvider = Provider<GoRouter>((ref) {
         name: RouteNames.knowledgeMap,
         builder: (context, state) => const KnowledgeMapScreen(),
       ),
-      GoRoute(
+     GoRoute(
         path: RouteNames.achievementsPath,
         name: RouteNames.achievements,
-        builder: (context, state) => const PlaceholderScreen(label: 'Achievements'),
+        builder: (context, state) => const AchievementsScreen(),
       ),
       GoRoute(
         path: RouteNames.teacherDashboardPath,
