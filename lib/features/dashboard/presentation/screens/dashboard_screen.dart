@@ -17,6 +17,7 @@ import '../widgets/continue_learning_card.dart';
 import '../widgets/recent_activity_tile.dart';
 import '../widgets/weekly_goal_card.dart';
 
+
 class DashboardScreen extends ConsumerWidget {
   const DashboardScreen({super.key});
 
@@ -45,6 +46,11 @@ class DashboardScreen extends ConsumerWidget {
             icon: const Icon(Icons.emoji_events_outlined),
             tooltip: 'Achievements',
             onPressed: () => context.pushNamed(RouteNames.achievements),
+          ),
+          IconButton(
+            icon: const Icon(Icons.school_outlined),
+            tooltip: 'Teacher Dashboard (preview)',
+            onPressed: () => context.pushNamed(RouteNames.teacherDashboard),
           ),
           IconButton(
             icon: const Icon(Icons.smart_toy_outlined),

@@ -14,6 +14,7 @@ import 'route_names.dart';
 import '../../features/achievements/presentation/screens/achievements_screen.dart';
 import '../../features/progress/presentation/screens/progress_screen.dart';
 import '../../features/ai_tutor/presentation/screens/ai_tutor_screen.dart';
+import '../../features/teacher_dashboard/presentation/screens/teacher_dashboard_screen.dart';
 
 final goRouterProvider = Provider<GoRouter>((ref) {
   return GoRouter(
@@ -113,7 +114,7 @@ final goRouterProvider = Provider<GoRouter>((ref) {
       GoRoute(
         path: RouteNames.teacherDashboardPath,
         name: RouteNames.teacherDashboard,
-        builder: (context, state) => const PlaceholderScreen(label: 'Teacher Dashboard'),
+        builder: (context, state) => const TeacherDashboardScreen(),
       ),
     ],
   );
