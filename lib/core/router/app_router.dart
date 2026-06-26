@@ -10,6 +10,7 @@ import '../../features/auth/presentation/screens/forgot_password_screen.dart';
 import '../widgets/placeholder_screen.dart';
 import '../widgets/main_shell.dart';
 import 'route_names.dart';
+import '../../features/progress/presentation/screens/progress_screen.dart';
 import '../../features/ai_tutor/presentation/screens/ai_tutor_screen.dart';
 
 final goRouterProvider = Provider<GoRouter>((ref) {
@@ -67,7 +68,7 @@ final goRouterProvider = Provider<GoRouter>((ref) {
               GoRoute(
                 path: RouteNames.progressPath,
                 name: RouteNames.progress,
-                builder: (context, state) => const PlaceholderScreen(label: 'Progress'),
+                builder: (context, state) => const ProgressScreen(),
               ),
             ],
           ),
